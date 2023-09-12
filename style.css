@@ -1,4 +1,8 @@
-html, body {
+* { /* global */
+    box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4 {
     box-sizing: border-box;
     font-family: sans-serif;
     font-size: 16px;
@@ -7,6 +11,14 @@ html, body {
 
 a {
     color: black;
+}
+
+h1{
+    font-size: 48px;
+}
+
+h2{
+    font-size: 20px;
 }
 
 .anchor-tag { 
@@ -20,12 +32,39 @@ a {
     padding: 25px;
 }
 
+header {
+    background-color: #85c4ff;
+    padding: 20px;
+}
+
+header nav {
+    align-items: center;
+    display: flex;
+    flex-direction: row; /* default flex direction is row */
+    justify-content: flex-end; /* push elements to the end */
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+header nav a {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 10px; /* margin is not "clickable" while padding is */
+}
+
+header nav a:last-of-type{
+    margin-right: 0;
+}
+
 .interior {
     background-color: #9ef490;
     border: 10px solid green;
-    margin: 40px;
+    margin: 40px auto;
     /* same as 40px 40px 40px 40px, the dimensions start from the top and go clockwise */
     /* putting auto fills the rest in -- default centering */
+    max-width: 900px;
     padding: 40px;
 }
 
@@ -42,7 +81,7 @@ a {
     background-color: lightcoral;
     border: 10px solid brown;
     display: flex;
-    flex-basis: 40%;
+    flex-basis: 47.75%;
     flex-shrink: 0;
     gap: 25px;
     padding: 25px;
@@ -76,4 +115,38 @@ a {
     justify-content: center;
     margin: 0 auto;
     max-width: 800px;
+}
+
+.positioning-wrapper{
+    background-color: #cad7f1;
+    padding: 40px 20px;
+}
+
+.interior--positioning{
+    background-color: #85c4ff;
+    border-color: #0e3f9e;
+    min-height: 600px;
+    position: relative;
+}
+
+.circle{
+    background-color: #cad7f1;
+    border: 5px solid #0e3f9e;
+    border-radius: 50%; /* 50% always makes a circle -- can be used for rounded corners */
+    height: 80px;
+    position: absolute;
+    width: 80px;
+}
+
+.square{
+    background-color: #cad7f1;
+    border: 5px solid #0e3f9e;
+    height: 80px;
+    position: absolute;
+    width: 80px;
+}
+
+.interior--header{
+    background-color: plum;
+    border-color: purple;
 }

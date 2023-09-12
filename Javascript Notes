@@ -1,0 +1,32 @@
+// Functions
+
+function coolFunction(arg){
+    if(type of arg === 'string') return 'string';
+    return 'notstring';
+}
+
+const thisval = coolFunction('hi'); // returns string
+
+const thisval = coolFunc
+
+const coolArrowFunction() => {
+    return 'hello';
+}
+
+OR const coolArrowFunction = () => 'hello';
+
+// Objects
+
+const annoyingObject = {
+    top: [
+        {
+            middle: {
+                bottom: {
+                    thing: 'frogs';
+                }
+            }
+        }
+    ]
+}
+
+annoyingObject.top[0].middle.bottom.thing;

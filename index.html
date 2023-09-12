@@ -33,7 +33,7 @@
                 </div>
             </section>
             <!-- Flex Box -->
-            <section>
+            <section class="section-wrapper" style="background-color: lightyellow;">
                 <div class="flex-interior">
                     <div class="flex-parent">
                         <div class="flex-child flex-child-big">
@@ -52,17 +52,54 @@
                     </div>
                 </div>
             </section>
-            <!-- -->
-            <section></section>
-            <!-- -->
-            <section></section>
-            <!-- -->
-            <section></section>
+            <!-- Positioning -->
+            <section class="positioning-wrapper">
+                <div class="interior interior--positioning">
+                    <h1>Position Elements</h1>
+                    <div class="circle" style="right: 20px; top: 300px;"></div>
+                    <div class="circle" style="left: 50px; bottom: 100px;"></div>
+                    <div class="circle" style="right: 200px; bottom: 30px;"></div>
+                    <div class="square" style="left: 300px; top: 300px;"></div>
+                    <div class="square" style="right: 30px; bottom: 20px;"></div>
+                </div>
+            </section>
+            <!-- Headers -->
+            <section class="section-wrapper" style="background-color: #f1ddf1;">
+                <div class="interior interior--header">
+                    <!-- content hierarchy important for SEO and for Google to index website properly -->
+                    <!-- headers are for data hierarchy, NOT for styling,  use classes for styling -->
+                    <h1>Highest Level Header (h1)</h1>
+                    <h2>Subsection of header one (h2)</h2>
+                    <p>this is a paragraph</p> <!-- make sure that the paragraphs relate to the headers -->
+                    <h3>Header three is a subsection of header two (h3)</h3>
+                    <h4>This is a subsection of the third header (h4)</h4>
+                    <!-- goes down to h6 -->
+                </div>
+            </section>
+            <!-- Simpe Javascript -->
+            <section class="interior">
+                <h1>Simple Javascript</h1>
+                <script> // typically not used
+                    let count = 0; // global scope
+                    function increaseCount(){
+                        count++;
+                        const countIndicator = document.querySelector(".count-indicator");
+                        return (countIndicator.innerHTML = count);
+                    }
+
+                    function decreaseCount(){
+                        count = count - 1;
+                        return document.querySelector(".count-indicator").innerHTML = count;
+
+                    }
+                </script>
+                <p>Count: <span class="count-indicator">0</span></p>
+                <button onClick="increaseCount()">Click to increase!</button>
+                <button onClick="decreaseCount()">Click to decrease!</button>
+            </section>
         </main>
         <footer>
 
         </footer>
     </body>
 </html>
-
-
